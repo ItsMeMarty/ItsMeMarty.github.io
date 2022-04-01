@@ -1,30 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/mejalosa.png">
-  <HelloWorld msg="Portfolio"/>
+  <v-app>
+    <v-main>
+        <v-parallax
+          dark
+          src="./assets/banner.jpeg"
+          height=250px
+        >
+        <Header />
+        </v-parallax>
+       
+       <Gallery/>
+       <Footer/>
+    </v-main>    
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import Header from './components/Header.vue'
+  import Gallery from './components/Gallery.vue'
+  import Footer from './components/Footer.vue'
+  export default {
+    name: 'App',
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+    components: {
+      Header,
+      Gallery,
+      Footer
+    },
+
+    data: () => ({
+      drawer: false,
+      group: null,
+    }),
   }
-}
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-img { 
-    width:30%; 
-    height:30%; 
-} 
-</style>
