@@ -11,8 +11,8 @@
         cols="3"
         >
             <v-img
-                :src="require(`../assets/${n}.jpeg`)"
-                :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+                :src="require(`../assets/mejalosa${n}.jpeg`)"
+                :lazy-src="`https://picsum.photos/400/600`"
                 aspect-ratio="1"
                 class="grey lighten-2"
             >
